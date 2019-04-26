@@ -8,7 +8,6 @@ router.post('/create', product_controller.create_product);
 router.get('/get_by_productId/:id', product_controller.product_detail);
 router.post('/:id/update', product_controller.update_product);
 router.delete('/:id/delete', product_controller.delete_product);
-router.post('/create_user', user_controller.create_user);
-router.post('/login', user_controller.login)
+router.post('/producttest', product_controller.product);
 
 module.exports = router;

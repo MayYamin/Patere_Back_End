@@ -49,3 +49,11 @@ exports.delete_product = function (req, res) {
         res.json
     })
 };
+exports.product = function (req, res) {   
+    Product.findOne({ name: req.body.name }, function (err, user) {
+        if(err) {
+            return next(err);
+        }
+        res.json(user)
+})
+}
